@@ -1,21 +1,18 @@
+for i in range(11):
+    print(i)
 
+i = 0
+while i<11:
+    print(i)
+    i+=1
 
+for j in range(10, 0, -1):
+    print(j)
 
-# for i in range(11):
-#     print(i)
-
-# i = 0
-# while i<11:
-#     print(i)
-#     i+=1
-
-# for j in range(10, 0, -1):
-#     print(j)
-
-# j = 10
-# while j > 0:
-#     print(j)
-#     j-=1
+j = 10
+while j > 0:
+    print(j)
+    j-=1
 
 for i in range(1, 8):
     print('#' * i)
@@ -2888,6 +2885,7 @@ countries_info = [
     }
 ]
 
+#i
 language = []
 for item in countries_info:
     for items in item['languages']: 
@@ -2898,8 +2896,9 @@ for item in countries_info:
 print(language)
 print(len(language))
 
-lang_counter = {}
 
+#ii
+lang_counter = {}
 for item in countries_info:
     for lang in item['languages']: 
         if lang in lang_counter:
@@ -2909,7 +2908,16 @@ for item in countries_info:
 popular_langs = sorted(lang_counter, key = lang_counter.get, reverse = True) 
 top_10 = popular_langs[:10]
 print(top_10)
+# here we use a dictionary and we add item, we add the language as key and the numbers of the repeatation as value. 
+# every time it see the language again it add to the number.
+#sorted : key---> it show how to sort and here we use the value to be sorted(numbers of repeat)
+#reverse = true ---> from most to least.
 
+
+
+
+
+#iii
 population = []
 for item in countries_info:
     population.append(item['population'])
